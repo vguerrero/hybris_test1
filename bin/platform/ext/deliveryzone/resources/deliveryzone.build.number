@@ -1,0 +1,11 @@
+#Ant properties
+#Thu Apr 02 14:25:28 CEST 2020
+version.api=1905
+vendor=hybris
+group.id=de.hybris.platform
+name=deliveryzone
+description=deliveryzone
+builddate=20200402 1419
+releasedate=20190628 1509
+version=1905.13
+module.name=platform-module
