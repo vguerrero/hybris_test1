@@ -1,0 +1,13 @@
+$siteUid=apparel-uk
+$supportedUiExperienceLevels=
+$storeUid=apparel-uk
+$channel=b2c
+$solrIndexedType=apparel-ukProductType
+$addonExtensionName=commerceorgsamplesaddon
+$contentCatalog=apparel-ukContentCatalog
+$configExtensionName=commerceorgsamplesaddon
+$productCatalog=apparelProductCatalog
+# -----------------------------------------------------------------------
+# Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+# -----------------------------------------------------------------------
+# -----------------------------------------------------------------------
