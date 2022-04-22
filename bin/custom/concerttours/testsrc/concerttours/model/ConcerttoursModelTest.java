@@ -1,6 +1,7 @@
 package concerttours.model;
 
 import concerttours.util.FileHelper;
+import concerttours.util.HsqlDBHelper;
 import de.hybris.platform.testframework.HybrisJUnit4TransactionalTest;
 import org.junit.After;
 import org.junit.Before;
@@ -50,4 +51,25 @@ public class ConcerttoursModelTest extends HybrisJUnit4TransactionalTest {
 
 
     }
+
+    /*
+    verify BAND table creation
+     */
+    @Test
+    public void testDatabaseSetup() throws Exception {
+        HsqlDBHelper hsqldb = new HsqlDBHelper(); // Note test will fail if the suite is running on this DB at the same time.
+        try {
+            String res = hsqldb.select("SELECT TABLE_NAME FROM INFORMATION_SCHEMA.SYSTEM_COLUMNS WHERE TABLE_NAME NOT LIKE 'SYSTEM_%'");
+            assertTrue("Could not find the table BANDS", res.contains("BANDS") );
+        }
+        catch (Exception e) {
+            LOG.error("testDatabaseSetup" +  "HsqlDBTest failed: " + e.getMessage());
+        }
+        finally {
+            hsqldb.shutdown();
+        }
+    }
+
+
+
 }
